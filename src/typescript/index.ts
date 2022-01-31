@@ -1,11 +1,28 @@
-const world = 'world';
 
-const API_URL = "";
+const API_URL = "https://icanhazdadjoke.com/";
 
 
-export function hello(world: string): string {
-  console.log('hola testing');
-  return `Hello ${world}! `;
+var headersFetch = { 
+                    headers:{
+                      'Accept': 'application/json',
+                      'Content-Type': 'application/json'
+                    }
+                   };
+
+
+export function getAJoke(): void {
+
+  
+  const joke = fetch(`${API_URL}`, headersFetch)
+              .then(response => response.json())
+              .then( (joke) => {
+
+                const divJoke = document.getElementById("joke");
+                const p = document.createElement("p");
+                p.textContent = joke.joke;
+                divJoke?.appendChild(p);
+
+              });
 }
 
-hello('hola ');
+document.getElementById('getJoke').addEventListener('click', getAJoke);
