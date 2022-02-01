@@ -15,4 +15,10 @@ body {
         -webkit-box-shadow: 5px 5px 3px 1px #CCCCCC;
         box-shadow: 5px 5px 3px 1px #CCCCCC;
     }
+    &__punt {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
 }

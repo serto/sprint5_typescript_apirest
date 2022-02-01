@@ -15,4 +15,12 @@ body {
   -webkit-box-shadow: 5px 5px 3px 1px #CCCCCC;
   box-shadow: 5px 5px 3px 1px #CCCCCC;
 }
+
+.jokes__punt {
+  display: none;
+}
+
+.jokes__punt.show {
+  display: block;
+}
 /*# sourceMappingURL=styles.css.map */
