@@ -2,3 +2,17 @@ body {
     background-color: #ccc;
     color: #222;
 }
+
+.jokes {
+    &__back {
+        height: 100vh;
+        background-image: url('../images/back.jpg');
+        background-size: cover;
+    }
+    &__jokeBox {
+        background-color: #fff;
+        border-radius: 15px;
+        -webkit-box-shadow: 5px 5px 3px 1px #CCCCCC;
+        box-shadow: 5px 5px 3px 1px #CCCCCC;
+    }
+}

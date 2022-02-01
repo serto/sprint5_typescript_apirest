@@ -10,8 +10,12 @@ export function getAJoke() {
         .then(function (response) { return response.json(); })
         .then(function (joke) {
         var divJoke = document.getElementById("joke");
+        if (divJoke === null || divJoke === void 0 ? void 0 : divJoke.hasChildNodes()) {
+            divJoke.innerHTML = " ";
+        }
         var p = document.createElement("p");
         p.textContent = joke.joke;
+        p.setAttribute('id', 'jokeFetch');
         divJoke === null || divJoke === void 0 ? void 0 : divJoke.appendChild(p);
     });
 }
