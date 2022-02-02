@@ -1,13 +1,19 @@
-body {
-    background-color: #ccc;
-    color: #222;
-}
-
 .jokes {
     &__back {
         height: 100vh;
-        background-image: url('../images/back.jpg');
         background-size: cover;
+        &.jokes__back--back0 {
+            background-image: url('../images/back.jpg');
+        }
+        &.jokes__back--back1 {
+            background-image: url('../images/blob.svg');
+        }
+        &.jokes__back--back2 {
+            background-image: url('../images/blob_1.svg');
+        }
+        &.jokes__back--back3 {
+            background-image: url('../images/blob_2.svg');
+        }
     }
     &__jokeBox {
         background-color: #fff;
@@ -20,5 +26,30 @@ body {
         &.show {
             display: block;
         }
+    }
+}
+
+.meteo {
+    border: 1px solid white;
+    left: 16px;
+    top: 16px;
+    padding: 8px;
+}
+
+.iconPunt {
+    cursor: pointer;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    text-indent: -9999px;
+    background-size: cover;
+    &__min {
+        background-image: url('../images/min.png');
+    }
+    &__med {
+        background-image: url('../images/med.png');
+    }
+    &__max {
+        background-image: url('../images/max.png');
     }
 }

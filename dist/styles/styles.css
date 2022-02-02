@@ -1,12 +1,22 @@
-body {
-  background-color: #ccc;
-  color: #222;
-}
-
 .jokes__back {
   height: 100vh;
-  background-image: url("../images/back.jpg");
   background-size: cover;
+}
+
+.jokes__back.jokes__back--back0 {
+  background-image: url("../images/back.jpg");
+}
+
+.jokes__back.jokes__back--back1 {
+  background-image: url("../images/blob.svg");
+}
+
+.jokes__back.jokes__back--back2 {
+  background-image: url("../images/blob_1.svg");
+}
+
+.jokes__back.jokes__back--back3 {
+  background-image: url("../images/blob_2.svg");
 }
 
 .jokes__jokeBox {
@@ -22,5 +32,33 @@ body {
 
 .jokes__punt.show {
   display: block;
+}
+
+.meteo {
+  border: 1px solid white;
+  left: 16px;
+  top: 16px;
+  padding: 8px;
+}
+
+.iconPunt {
+  cursor: pointer;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-indent: -9999px;
+  background-size: cover;
+}
+
+.iconPunt__min {
+  background-image: url("../images/min.png");
+}
+
+.iconPunt__med {
+  background-image: url("../images/med.png");
+}
+
+.iconPunt__max {
+  background-image: url("../images/max.png");
 }
 /*# sourceMappingURL=styles.css.map */

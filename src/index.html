@@ -12,7 +12,15 @@
 
 <body>
 
-    <div class="container-fluid jokes__back">
+    <div class="container-fluid jokes__back jokes__back--back1" id="jokesBackground">
+
+
+        <div class="meteo position-absolute">
+            <h2>aqui anira el temps</h2>
+        </div>
+
+
+
         <div class="row justify-content-center pt-5 pb-5 h-100 align-items-center">
             <div class="col-8 col-md-6 text-center p-3 jokes__jokeBox">
 
@@ -23,10 +31,10 @@
                 </div>
 
                 <div class="jokes__punt mt-4 mb-4" id="jokeRate">
-                    <h4>Valora l'acudit:</h4>
-                    <a href="#" id="point-neg" data-punt="1" class="btn btn-secondary ms-2 me-2">1</a>
-                    <a href="#" id="point-zero" data-punt="2" class="btn btn-secondary ms-2 me-2">2</a>
-                    <a href="#" id="point-pos" data-punt="3" class="btn btn-secondary ms-2 me-2">3</a>
+                    <h4 class="mb-3">Valora l'acudit:</h4>
+                    <a href="#" id="point-neg" data-punt="1" class="iconPunt iconPunt__min ms-2 me-2">1</a>
+                    <a href="#" id="point-zero" data-punt="2" class="iconPunt iconPunt__med ms-2 me-2">2</a>
+                    <a href="#" id="point-pos" data-punt="3" class="iconPunt iconPunt__max ms-2 me-2">3</a>
                 </div>
 
                 <button class="btn btn-primary mt-2" id="getJoke">Següent acudit</button>
