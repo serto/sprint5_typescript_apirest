@@ -1,3 +1,4 @@
+var _a, _b, _c, _d;
 var API_URL = "https://icanhazdadjoke.com/";
 var API_WEATHER = "http://api.weatherstack.com/current";
 var API_WEATHER_KEY = "b98db4ac3beb81feecf2ed523b254135";
@@ -74,8 +75,8 @@ function weather() {
     });
 }
 weather();
-document.getElementById('getJoke').addEventListener('click', getAJoke);
-document.getElementById('point-neg').addEventListener('click', function (e) { puntJoke(e.target); });
-document.getElementById('point-zero').addEventListener('click', function (e) { puntJoke(e.target); });
-document.getElementById('point-pos').addEventListener('click', function (e) { puntJoke(e.target); });
+(_a = document.getElementById('getJoke')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', getAJoke);
+(_b = document.getElementById('point-neg')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', function (e) { puntJoke(e.target); });
+(_c = document.getElementById('point-zero')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', function (e) { puntJoke(e.target); });
+(_d = document.getElementById('point-pos')) === null || _d === void 0 ? void 0 : _d.addEventListener('click', function (e) { puntJoke(e.target); });
 //# sourceMappingURL=index.js.map

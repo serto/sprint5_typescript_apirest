@@ -2,7 +2,6 @@
 const API_URL = "https://icanhazdadjoke.com/";
 const API_WEATHER = "http://api.weatherstack.com/current";
 const API_WEATHER_KEY = "b98db4ac3beb81feecf2ed523b254135";
-
 const API_CHUCKJOKES = "https://api.chucknorris.io/jokes/random";
 
 const headersFetch = { 
@@ -67,7 +66,6 @@ function randomBack() {
   divBackground?.classList.remove("jokes__back--back3");
   divBackground?.classList.add(randomBack);
 
-
 }
 
 export function puntJoke(elem: EventTarget): void {
@@ -108,8 +106,8 @@ function weather(): void {
 
 weather();
 
-document.getElementById('getJoke').addEventListener('click', getAJoke);
+document.getElementById('getJoke')?.addEventListener('click', getAJoke);
 
-document.getElementById('point-neg').addEventListener('click', (e) => { puntJoke(e.target); });
-document.getElementById('point-zero').addEventListener('click', (e) => { puntJoke(e.target); });
-document.getElementById('point-pos').addEventListener('click', (e) => { puntJoke(e.target); });
+document.getElementById('point-neg')?.addEventListener('click', (e) => { puntJoke(e.target); });
+document.getElementById('point-zero')?.addEventListener('click', (e) => { puntJoke(e.target); });
+document.getElementById('point-pos')?.addEventListener('click', (e) => { puntJoke(e.target); });
