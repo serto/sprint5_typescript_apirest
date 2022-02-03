@@ -1,5 +1,90 @@
-body {
-  background-color: #ccc;
-  color: #222;
+.jokes__back {
+  height: 100vh;
+  background-size: cover;
+  background-image: url("../images/back_1.jpg");
+}
+
+.jokes__jokeBox {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+}
+
+.jokes__jokeBox.jokes__jokeBox--back0 {
+  background-image: url("../images/blob_0.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back1 {
+  background-image: url("../images/blob_1.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back2 {
+  background-image: url("../images/blob_1.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back3 {
+  background-image: url("../images/blob_2.svg");
+}
+
+.jokes__jokeBox h1,
+.jokes__jokeBox h4,
+.jokes__jokeBox p {
+  color: white;
+}
+
+.jokes__punt {
+  display: none;
+}
+
+.jokes__punt.show {
+  display: block;
+}
+
+.meteo {
+  background-color: #eee;
+  border-radius: 16px;
+  left: 16px;
+  top: 16px;
+  padding: 8px 16px;
+  display: none;
+}
+
+.meteo img {
+  border-radius: 50%;
+}
+
+.meteo p {
+  margin: 0 0 0 8px;
+  font-weight: bold;
+}
+
+.iconPunt {
+  cursor: pointer;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-indent: -9999px;
+  background-size: cover;
+}
+
+.iconPunt__min {
+  background-image: url("../images/min.png");
+}
+
+.iconPunt__med {
+  background-image: url("../images/med.png");
+}
+
+.iconPunt__max {
+  background-image: url("../images/max.png");
+}
+
+.btn-info {
+  color: white;
+}
+
+.btn-info:hover, .btn-info:focus {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
