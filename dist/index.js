@@ -1,3 +1,4 @@
+"use strict";
 var _a, _b, _c, _d;
 var API_URL = "https://icanhazdadjoke.com/";
 var API_WEATHER = "http://api.weatherstack.com/current";
@@ -12,13 +13,11 @@ var headersFetch = {
 var headersFetchCors = {
     mode: 'cors',
     headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Accept': 'application/json'
     }
 };
 var reportJokes = [];
-export function getAJoke() {
+function getAJoke() {
     var randomAPI = Math.floor(Math.random() * 2);
     var API_To_Call = (randomAPI == 0) ? API_URL : API_CHUCKJOKES;
     fetch("".concat(API_To_Call), headersFetch)
@@ -41,14 +40,15 @@ export function getAJoke() {
 }
 function randomBack() {
     var randomAPI = Math.floor(Math.random() * 4);
-    var randomBack = "jokes__back--back".concat(randomAPI);
-    var divBackground = document.getElementById('jokesBackground');
-    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__back--back1");
-    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__back--back2");
-    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__back--back3");
+    var randomBack = "jokes__jokeBox--back".concat(randomAPI);
+    var divBackground = document.getElementById('jokesBox');
+    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__jokeBox--back0");
+    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__jokeBox--back1");
+    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__jokeBox--back2");
+    divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.remove("jokes__jokeBox--back3");
     divBackground === null || divBackground === void 0 ? void 0 : divBackground.classList.add(randomBack);
 }
-export function puntJoke(elem) {
+function puntJoke(elem) {
     var _a, _b;
     var punt = elem.dataset.punt;
     var date = new Date();
@@ -71,7 +71,19 @@ function weather() {
     fetch("".concat(API_WEATHER, "?access_key=").concat(API_WEATHER_KEY, "&query=Barcelona"), headersFetchCors)
         .then(function (response) { return response.json(); })
         .then(function (wheater) {
-        console.log('works ? : ', wheater);
+        //console.log(wheater);
+        var icon = wheater.current.weather_icons[0];
+        var temp = wheater.current.temperature;
+        var name = wheater.location.name;
+        var region = wheater.location.region;
+        var meteo = document.getElementById("meteo");
+        var img = document.createElement("img");
+        var p = document.createElement("p");
+        img.setAttribute('src', icon);
+        p.textContent = "".concat(temp, " \u00BAC | ").concat(name, ", ").concat(region);
+        meteo === null || meteo === void 0 ? void 0 : meteo.appendChild(img);
+        meteo === null || meteo === void 0 ? void 0 : meteo.appendChild(p);
+        meteo === null || meteo === void 0 ? void 0 : meteo.classList.add('d-flex');
     });
 }
 weather();

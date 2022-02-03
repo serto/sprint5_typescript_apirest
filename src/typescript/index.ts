@@ -14,15 +14,13 @@ const headersFetch = {
 const headersFetchCors = { 
                     mode: 'cors',
                     headers:{
-                      'Accept': 'application/json',
-                      'Content-Type': 'application/json',
-                      'Access-Control-Allow-Origin': '*'
+                      'Accept': 'application/json'
                     }
                   };
 
 const reportJokes:Object[] = [];
 
-export function getAJoke(): void {
+function getAJoke(): void {
 
   const randomAPI = Math.floor(Math.random() * 2);
 
@@ -57,18 +55,19 @@ export function getAJoke(): void {
 function randomBack() {
 
   let randomAPI = Math.floor(Math.random() * 4);
-  const randomBack = `jokes__back--back${randomAPI}`;
+  const randomBack = `jokes__jokeBox--back${randomAPI}`;
 
-  const divBackground = document.getElementById('jokesBackground');
+  const divBackground = document.getElementById('jokesBox');
 
-  divBackground?.classList.remove("jokes__back--back1");
-  divBackground?.classList.remove("jokes__back--back2");
-  divBackground?.classList.remove("jokes__back--back3");
+  divBackground?.classList.remove("jokes__jokeBox--back0");
+  divBackground?.classList.remove("jokes__jokeBox--back1");
+  divBackground?.classList.remove("jokes__jokeBox--back2");
+  divBackground?.classList.remove("jokes__jokeBox--back3");
   divBackground?.classList.add(randomBack);
 
 }
 
-export function puntJoke(elem: EventTarget): void {
+function puntJoke(elem: EventTarget): void {
   
   const punt = elem.dataset.punt;
 
@@ -99,7 +98,24 @@ function weather(): void {
               .then(response => response.json())
               .then( (wheater) => {
 
-                console.log('works ? : ', wheater);
+                //console.log(wheater);
+                const icon = wheater.current.weather_icons[0];
+                const temp = wheater.current.temperature;
+                const name = wheater.location.name;
+                const region = wheater.location.region;
+
+                const meteo = document.getElementById("meteo");
+
+                const img = document.createElement("img");
+                const p = document.createElement("p");
+
+                img.setAttribute('src', icon);
+
+                p.textContent = `${temp} ºC | ${name}, ${region}`;
+
+                meteo?.appendChild(img);
+                meteo?.appendChild(p);
+                meteo?.classList.add('d-flex');
 
               }); 
 }

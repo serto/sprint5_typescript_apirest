@@ -1,30 +1,36 @@
 .jokes__back {
   height: 100vh;
   background-size: cover;
-}
-
-.jokes__back.jokes__back--back0 {
-  background-image: url("../images/back.jpg");
-}
-
-.jokes__back.jokes__back--back1 {
-  background-image: url("../images/blob.svg");
-}
-
-.jokes__back.jokes__back--back2 {
-  background-image: url("../images/blob_1.svg");
-}
-
-.jokes__back.jokes__back--back3 {
-  background-image: url("../images/blob_2.svg");
+  background-image: url("../images/back_1.jpg");
 }
 
 .jokes__jokeBox {
-  background-color: #fff;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 5px 5px 3px 1px #CCCCCC;
-  box-shadow: 5px 5px 3px 1px #CCCCCC;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+}
+
+.jokes__jokeBox.jokes__jokeBox--back0 {
+  background-image: url("../images/blob_0.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back1 {
+  background-image: url("../images/blob_1.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back2 {
+  background-image: url("../images/blob_1.svg");
+}
+
+.jokes__jokeBox.jokes__jokeBox--back3 {
+  background-image: url("../images/blob_2.svg");
+}
+
+.jokes__jokeBox h1,
+.jokes__jokeBox h4,
+.jokes__jokeBox p {
+  color: white;
 }
 
 .jokes__punt {
@@ -36,10 +42,21 @@
 }
 
 .meteo {
-  border: 1px solid white;
+  background-color: #eee;
+  border-radius: 16px;
   left: 16px;
   top: 16px;
-  padding: 8px;
+  padding: 8px 16px;
+  display: none;
+}
+
+.meteo img {
+  border-radius: 50%;
+}
+
+.meteo p {
+  margin: 0 0 0 8px;
+  font-weight: bold;
 }
 
 .iconPunt {
@@ -61,5 +78,13 @@
 
 .iconPunt__max {
   background-image: url("../images/max.png");
+}
+
+.btn-info {
+  color: white;
+}
+
+.btn-info:hover, .btn-info:focus {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
